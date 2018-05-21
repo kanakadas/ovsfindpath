@@ -1,0 +1,720 @@
+[32monos> [0mnetcfg
+{
+  "apps" : {
+    "org.onosproject.dhcprelay" : {
+      "default" : [ {
+        "dhcpServerConnectPoint" : "of:0000000005912401/47",
+        "serverIps" : [ "10.250.20.185", "2001:558:ff10:4ef::185" ],
+        "gatewayIps" : [ "172.16.41.1", "fd00:0:0:41::1" ],
+        "relayAgentIps" : {
+          "of:0000000005912401" : {
+            "ipv6" : "2001:0558:FF10:04FB::1",
+            "ipv4" : "192.168.9.1"
+          },
+          "of:0000000005912402" : {
+            "ipv6" : "2001:0558:FF10:04FB::1",
+            "ipv4" : "192.168.9.1"
+          },
+          "of:0000000005916407" : {
+            "ipv6" : "2001:0558:FF10:04FB::1",
+            "ipv4" : "192.168.9.1"
+          }
+        }
+      } ],
+      "indirect" : [ {
+        "dhcpServerConnectPoint" : "of:0000000005912401/51",
+        "serverIps" : [ "10.253.91.197", "2001:558:FF2F:108:10:253:91:197" ],
+        "gatewayIps" : [ "10.250.19.17", "2001:558:ff10:400::17" ],
+        "relayAgentIps" : {
+          "of:0000000005912401" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          },
+          "of:0000000005912402" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          },
+          "of:0000000005912403" : {v
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          },
+          "of:0000000005912404" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          }
+        }
+      }, {
+        "dhcpServerConnectPoint" : "of:0000000005912401/51",
+        "serverIps" : [ "10.253.91.198", "2001:558:FF2F:108:10:253:91:198" ],
+        "gatewayIps" : [ "10.250.19.17", "2001:558:ff10:400::17" ],
+        "relayAgentIps" : {
+          "of:0000000005912401" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          },
+          "of:0000000005912402" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          },
+          "of:0000000005912403" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          },
+          "of:0000000005912404" : {
+            "ipv6" : "2001:558:ff89:a401::1",
+            "ipv4" : "10.254.40.129"
+          }
+        }
+      } ]
+    },
+    "org.onosproject.provider.lldp" : {
+      "suppression" : {
+        "deviceTypes" : [ "ROADM", "OTN", "FIBER_SWITCH", "OPTICAL_AMPLIFIER" ],
+        "annotation" : "{\"no-lldp\":null}"
+      }
+    },
+    "org.onosproject.routing" : {
+      "routes" : [ {
+        "prefix" : "10.250.20.160/27",
+        "nextHop" : "172.16.41.1"
+      }, {
+        "prefix" : "10.250.20.160/27",
+        "nextHop" : "172.16.42.1"
+      }, {
+        "prefix" : "0.0.0.0/0",
+        "nextHop" : "10.250.19.17"
+      }, {
+        "prefix" : "0.0.0.0/0",
+        "nextHop" : "10.250.19.25"
+      }, {
+        "prefix" : "2001:558:ff10:4fc::/64",
+        "nextHop" : "fd00:0:0:41::1"
+      }, {
+        "prefix" : "2001:558:ff10:4fc::/64",
+        "nextHop" : "fd00:0:0:42::1"
+      }, {
+        "prefix" : "2001:558:ff10:4ef::/64",
+        "nextHop" : "fd00:0:0:41::1"
+      }, {
+        "prefix" : "2001:558:ff10:4ef::/64",
+        "nextHop" : "fd00:0:0:42::1"
+      }, {
+        "prefix" : "::/0",
+        "nextHop" : "2001:558:ff10:400::17"
+      }, {
+        "prefix" : "::/0",
+        "nextHop" : "2001:558:ff10:401::25"
+      } ]
+    }
+  },
+  "devices" : {
+    "of:0000000005912401" : {
+      "segmentrouting" : {
+        "name" : "BG4-Leaf-1A",
+        "ipv4NodeSid" : 701,
+        "ipv4Loopback" : "192.168.151.2",
+        "ipv6NodeSid" : 801,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::2",
+        "routerMac" : "a8:2b:b5:2f:ff:b5",
+        "pairDeviceId" : "of:0000000005912402",
+        "pairLocalPort" : 46,
+        "isEdgeRouter" : true,
+        "adjacencySids" : [ ]
+      },
+      "basic" : {
+        "driver" : "qmx-ofdpa3",
+        "name" : "Leaf-1A"
+      }
+    },
+    "of:0000000005912403" : {
+      "segmentrouting" : {
+        "name" : "BG4-Leaf-3A",
+        "ipv4NodeSid" : 705,
+        "ipv4Loopback" : "192.168.151.4",
+        "ipv6NodeSid" : 805,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::4",
+        "routerMac" : "a8:2b:b5:6e:87:83",
+        "pairDeviceId" : "of:0000000005912404",
+        "pairLocalPort" : 46,
+        "isEdgeRouter" : true,
+        "adjacencySids" : [ ]
+      },
+      "basic" : {
+        "driver" : "qmx-ofdpa3",
+        "name" : "Leaf-3A"
+      }
+    },
+    "of:0000000007712406" : {
+      "basic" : {
+        "driver" : "ofdpa3",
+        "name" : "SPINE2"
+      },
+      "segmentrouting" : {
+        "name" : "BG4-SPINE2",
+        "ipv4NodeSid" : 722,
+        "ipv4Loopback" : "192.168.151.7",
+        "ipv6NodeSid" : 822,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::7",
+        "routerMac" : "a8:2b:b5:1c:74:7d",
+        "isEdgeRouter" : false,
+        "adjacencySids" : [ ]
+      }
+    },
+    "of:0000000007712405" : {
+      "segmentrouting" : {
+        "name" : "BG4-SPINE1",
+        "ipv4NodeSid" : 721,
+        "ipv4Loopback" : "192.168.151.6",
+        "ipv6NodeSid" : 821,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::6",
+        "routerMac" : "8c:ea:1b:0f:f0:e3",
+        "isEdgeRouter" : false,
+        "adjacencySids" : [ ]
+      },
+      "basic" : {
+        "driver" : "ofdpa3",
+        "name" : "SPINE1"
+      }
+    },
+    "of:0000000005916407" : {
+      "basic" : {
+        "driver" : "qmx-ofdpa3",
+        "name" : "DAAS"
+      },
+      "segmentrouting" : {
+        "name" : "BG4-DAAS",
+        "ipv4NodeSid" : 720,
+        "ipv4Loopback" : "192.168.151.8",
+        "ipv6NodeSid" : 820,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::8",
+        "routerMac" : "a8:2b:b5:90:12:98",
+        "isEdgeRouter" : true,
+        "adjacencySids" : [ ]
+      }
+    },
+    "of:0000000005912402" : {
+      "basic" : {
+        "driver" : "qmx-ofdpa3",
+        "name" : "Leaf-1B"
+      },
+      "segmentrouting" : {
+        "name" : "BG4-Leaf-1B",
+        "ipv4NodeSid" : 702,
+        "ipv4Loopback" : "192.168.151.3",
+        "ipv6NodeSid" : 802,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::3",
+        "routerMac" : "a8:2b:b5:2f:ff:b5",
+        "pairDeviceId" : "of:0000000005912401",
+        "pairLocalPort" : 46,
+        "isEdgeRouter" : true,
+        "adjacencySids" : [ ]
+      }
+    },
+    "of:0000000005912404" : {
+      "basic" : {
+        "driver" : "qmx-ofdpa3",
+        "name" : "Leaf-3B"
+      },
+      "segmentrouting" : {
+        "name" : "BG4-Leaf-3B",
+        "ipv4NodeSid" : 706,
+        "ipv4Loopback" : "192.168.151.5",
+        "ipv6NodeSid" : 806,
+        "ipv6Loopback" : "2001:0558:FF10:04F0::5",
+        "routerMac" : "a8:2b:b5:6e:87:83",
+        "pairDeviceId" : "of:0000000005912403",
+        "pairLocalPort" : 46,
+        "isEdgeRouter" : true,
+        "adjacencySids" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "of:0000000005912401/46" : {
+      "interfaces" : [ {
+        "name" : "Leaf-1A-1B PAIR LINK",
+        "vlan-tagged" : [ 111 ],
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/11" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-PROV-V6-GW, BG4-DSI-IPV6,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/9" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-PROV-V6-GW, BG4-DSI-IPV6,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005916407/4" : {
+      "interfaces" : [ {
+        "name" : "RPD",
+        "vlan-untagged" : "114",
+        "ips" : [ "192.168.9.1/24", "2001:0558:FF10:04FB::1/64" ],
+        "mac" : "A8:2B:B5:90:12:98"
+      } ]
+    },
+    "of:0000000005912402/7" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005916407/2" : {
+      "interfaces" : [ {
+        "name" : "RPD",
+        "vlan-untagged" : "114",
+        "ips" : [ "192.168.9.1/24", "2001:0558:FF10:04FB::1/64" ],
+        "mac" : "A8:2B:B5:90:12:98"
+      } ]
+    },
+    "of:0000000005912403/12" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912402/5" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912404/46" : {
+      "interfaces" : [ {
+        "name" : "16-15 pair link connected",
+        "vlan-tagged" : [ 113 ],
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912402/3" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/47" : {
+      "interfaces" : [ {
+        "name" : "12-47- CCRA",
+        "vlan-native" : "42",
+        "vlan-tagged" : [ 32 ],
+        "ips" : [ "172.16.42.2/24", "fd00:0:0:42::2/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/1" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/51" : {
+      "interfaces" : [ {
+        "name" : "12-51 RUR",
+        "vlan-untagged" : "32",
+        "ips" : [ "10.250.19.26/29", "2001:0558:FF10:0401::26/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912404/1" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/3" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/5" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/12" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912404/7" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/10" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/11" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/9" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/8" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912404/11" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912403/9" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/6" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/7" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/4" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/46" : {
+      "interfaces" : [ {
+        "name" : "15-16 pair link connected",
+        "vlan-tagged" : [ 113 ],
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912403/5" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/2" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW,BG4-VCMTS-NS1-IPv6,BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/3" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912403/1" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4,BG4-PPOD1-GCP-IPv4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/51" : {
+      "interfaces" : [ {
+        "name" : "11-51 RUR",
+        "vlan-untagged" : "31",
+        "ips" : [ "10.250.19.18/29", "2001:0558:FF10:0400::18/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912401/47" : {
+      "interfaces" : [ {
+        "name" : "11-47-1 CCRA",
+        "vlan-native" : "41",
+        "vlan-tagged" : [ 31 ],
+        "ips" : [ "172.16.41.2/24", "fd00:0:0:41::2/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/12" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-PROV-V6-GW, BG4-DSI-IPV6,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/10" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-PROV-V6-GW, BG4-DSI-IPV6,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/8" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-PROV-V6-GW, BG4-DSI-IPV6,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/6" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/4" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/46" : {
+      "interfaces" : [ {
+        "name" : "Leaf-1B-1A PAIR LINK",
+        "vlan-tagged" : [ 111 ],
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912402/2" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005916407/1" : {
+      "interfaces" : [ {
+        "name" : "RPD",
+        "vlan-untagged" : "114",
+        "ips" : [ "192.168.9.1/24", "2001:0558:FF10:04FB::1/64" ],
+        "mac" : "A8:2B:B5:90:12:98"
+      } ]
+    },
+    "of:0000000005912404/2" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4,BG4-PPOD1-GCP-IPv4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/4" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4,BG4-PPOD1-GCP-IPv4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/6" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/11" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912404/8" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005916407/47" : {
+      "interfaces" : [ {
+        "name" : "RPD",
+        "vlan-untagged" : "114",
+        "ips" : [ "192.168.9.1/24", "2001:0558:FF10:04FB::1/64" ],
+        "mac" : "A8:2B:B5:90:12:98"
+      } ]
+    },
+    "of:0000000005912401/9" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/10" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/10" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/7" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/8" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912404/12" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/5" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/6" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/3" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW, BG4-VCMTS-NS1-IPv6, BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/4" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    },
+    "of:0000000005912401/1" : {
+      "interfaces" : [ {
+        "name" : "BG4-VCMTS-NS1-IPV4, BG4-DSI-V4-GW, BG4-NSI.PROV-V4-GW, BG4-CM-IPV4-GW,BG4-MTA-IPv4-GW,BG4-CPE-IPv4-GW,BG4-VCMTS-NS1-IPv6,BG4-DSI-IPV6,BG4-NSI.BG4-PROV-V6-GW,BG4-CM-IPv6-GW,BG4-MTA-IPv6-GW,BG4-CPE-IPv6-GW",
+        "vlan-untagged" : "111",
+        "ips" : [ "10.250.20.193/28", "10.250.20.129/27", "10.250.21.161/27", "10.254.40.129/25", "10.254.164.1/24", "10.255.31.1/24", "2001:0558:FF10:04F5::1/64", "2001:0558:FF10:0410::1/64", "2001:0558:FF10:040F::1/64", "2001:558:ff89:a401::1/64", "2001:558:ff89:3f55::1/64", "2001:0558:ff89:a6e3::1/64" ],
+        "mac" : "A8:2B:B5:2F:FF:B5"
+      } ]
+    },
+    "of:0000000005912403/2" : {
+      "interfaces" : [ {
+        "name" : "BG4-PPOD1-INFRA-IPV4, BG4-PPOD1-GCP-IPv4, BG4-PPOD1-MGMT-IPV4, BG4-PPOD1-INFRA-IPV6, BG4-PPOD1-GCP-IPv6, BG4-PPOD1-MGMT-IPV6",
+        "vlan-untagged" : "113",
+        "ips" : [ "10.250.20.209/28", "10.250.21.129/28", "10.250.22.49/30", "2001:0558:FF10:04F6::1/64", "2001:0558:FF10:0411::1/64", "2001:0558:FF10:04EB::1/64" ],
+        "mac" : "A8:2B:B5:6E:87:83"
+      } ]
+    }
+  },
+  "regions" : { },
+  "hosts" : { },
+  "layouts" : { },
+  "links" : { }
+}
